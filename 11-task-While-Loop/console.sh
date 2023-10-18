@@ -22,9 +22,10 @@
  while true; do
 	echo "Please enter something:"
 	read user_input
-
 	if [[ $user_input == "ls" ]]; then
-	ls -ltr ~
+	echo "Enter the directory path to see the content"
+	read user_ls_path
+	ls -ltr "$user_ls_path"
 	elif [[ $user_input == "pwd" ]]; then
 	pwd
 	elif [[ $user_input == "hi" ]]; then
